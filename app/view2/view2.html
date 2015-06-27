@@ -1,5 +1,10 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div ng-app="myApp.view2">
+	<div ng-controller="View2Ctrl">
+		<h1>Welcome to the {{title}} page!</h1><br>
+		Your name:
+		<input type="text" ng-model="username">
+		<button ng-click="sayHello()" class="btn btn-danger">Click Me</button>
+		<hr>
+		{{greeting}}
+	</div>
+</div>

@@ -7,7 +7,7 @@
   padding: 0 0 0.5em;
 }
 
-.menu:before {
+/*.menu:before {
   content: "[";
 }
 
@@ -27,4 +27,14 @@
 .menu > li:nth-child(1):before {
   content: "";
   padding: 0;
+}*/
+ul.navbar.navbar-nav.navbar-right li a:link, a:visited{
+  text-decoration: none;
+}
+ul.navbar.navbar-nav.navbar-right li {
+  padding: 10px;
+}
+.show-scope-demo.ng-scope, .show-scope-demo .ng-scope {
+  border: solid red 1px;
+  margin: 3px;
 }
