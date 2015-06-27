@@ -2,9 +2,13 @@
 	<div ng-controller="View2Ctrl">
 		<h1>Welcome to the {{title}} page!</h1><br>
 		Your name:
+		<!-- Re-assign username variable to contents of input box-->
 		<input type="text" ng-model="username">
+        <!-- Call sayHello() function to reassign the variable greeting to the contents
+            of the text box-->
 		<button ng-click="sayHello()" class="btn btn-primary">Click Me</button>
 		<hr>
+        <!-- Print greeting variable-->
 		{{greeting}}
 	</div>
 </div>
