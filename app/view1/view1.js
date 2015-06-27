@@ -12,8 +12,8 @@ angular.module('myApp.view1', ['ngRoute'])
 .controller('MainCtrl', ['$scope', '$rootScope',function($scope, $rootScope) {
 	$scope.title = 'Home';
 	$scope.name = 'World';
-	$rootScope.department = 'angular';
+	$rootScope.department = 'Waterford';
 }])
 .controller('SecondCtrl', ['$scope', function($scope){
 	$scope.names = ['Joe', 'Michelle', 'Joseph'];
-}])
+}]);
