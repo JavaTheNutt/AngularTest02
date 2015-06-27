@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
+<div ng-app="myApp.view3">
+    <div id="simple" ng-controller="MyController">
+        <p>Let's try a simple notify service, injected into the controller...</p>
+        <input ng-init="message='test'" ng-model="message">
+        <button ng-click="callNotify(message);">NOTIFY</button>
+        <p>(you have to click 3 times to get an alert)</p>
+    </div>
+</div>
