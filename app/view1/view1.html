@@ -1,13 +1,19 @@
+<!--This is the class to add the css-->
 <div class="show-scope-demo">
-	<div ng-app="myApp.view1">
-		<h1>Welcome to the {{title}} page!</h1>
-		<div ng-controller="MainCtrl">
-			Hello {{name}}
-		</div>
-		<div ng-controller="SecondCtrl">
-			<ol>
-				<li ng-repeat="name in names">{{name}} from {{department}}</li>
-			</ol>
-		</div>
-	</div>
+    <!-- Specify module-->
+    <div ng-app="myApp.view1">
+        <h1>Welcome to the {{title}} page!</h1>
+        <!-- Specify controller scope for MainCtrl-->
+        <div ng-controller="MainCtrl">
+            Hello {{name}}
+        </div>
+        <!-- Specify controller scope for SecondCtrl-->
+        <div ng-controller="SecondCtrl">
+            <ol>
+                <!-- Takes the department variable specified in 'MainCtrl' on the rootScope and will ]
+                    append it to the list for each name in the names array-->
+                <li ng-repeat="name in names">{{name}} from {{department}}</li>
+            </ol>
+        </div>
+    </div>
 </div>

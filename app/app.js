@@ -8,6 +8,7 @@ angular.module('myApp', [
     'myApp.view3',
     'myApp.version'
 ]).
+    /*Redirect to view1 for unrecognised URL's*/
     config(['$routeProvider',function($routeProvider) {
         $routeProvider.otherwise({redirectTo: '/view1'});
     }]);
