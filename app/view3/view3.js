@@ -8,18 +8,31 @@ angular.
             controller: 'MyController'
         })
     }])
-    .controller('MyController', ['$scope', 'notify', function($scope, notify){
-        $scope.callNotify = function(msg){
-            notify(msg);
-        }
-    }])
-    .factory('notify', ['$window', function(win){
-        var msgs = [];
-        return function (msg) {
-           msgs.push(msg);
-            if(msgs.length == 3){
-                win.alert(msgs.join("\n"));
-                msgs = [];
-            }
-        }
+    .controller('MyController', ['$scope', function($scope){
+        /*This object is what the data will be placed in*/
+        $scope.input = {
+            "name" : "",
+            "email": "",
+            "gender": ""
+        };
+        /*This is the master object that the input data will be copied to*/
+        $scope.master = {};
+        //This is the array that will hold tne objects
+        $scope.list = [];
+        //This function will be called when the submit button is pressed
+        $scope.update = function (user) {
+            //Copy the parameter into the master object
+            $scope.master = angular.copy(user);
+            //Push the master object to the list array
+            $scope.list.push($scope.master);
+        };
+        //Wipe text boxes when reset button is pushed
+        $scope.reset = function () {
+            $scope.input.name = "";
+            $scope.input.email = "";
+            $scope.input.gender = "";
+
+        };
+        //ensure boxes are empty on refresh
+        $scope.reset();
     }]);

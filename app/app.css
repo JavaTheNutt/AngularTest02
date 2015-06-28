@@ -14,3 +14,6 @@ Selector for a scope that is a descendant of a class of .show-scope-demo*/
     border: solid red 1px;
     margin: 3px;
 }
+#formCapture{
+    display: none;
+}
