@@ -13,6 +13,10 @@ angular.
         $scope.input = {
             "name" : "",
             "email": "",
+            "usrName": "",
+            "pswrd1" : "",
+            "pswrd2" : "",
+            "address": "",
             "gender": ""
         };
         /*This is the master object that the input data will be copied to*/
@@ -30,6 +34,10 @@ angular.
         $scope.reset = function () {
             $scope.input.name = "";
             $scope.input.email = "";
+            $scope.input.usrName = "";
+            $scope.input.pswrd1 = "";
+            $scope.input.pswrd2 = "";
+            $scope.input.address = "";
             $scope.input.gender = "";
 
         };

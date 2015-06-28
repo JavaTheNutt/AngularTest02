@@ -1,25 +1,62 @@
 <div ng-app="myApp.view3">
     <div id="simple" ng-controller="MyController">
+        <div class="col-xs-6">
+
+        </div>
         <!-- novalidate prevents native form validation-->
-        <form novalidate class="form-horizontal">
+        <form novalidate class="form-horizontal col-xs-6">
             <!-- The below inputs will add attributes to the input object-->
             <div class="form-group">
-                <label for="name" class="control-label col-md-3">Name</label>
-                <input type="text" ng-model="input.name" id="name" class="form-control col-md-9">
+                <label for="name" class="control-label col-md-2">Name</label>
+                <div class="col-md-10">
+                    <input type="text" ng-model="input.name" id="name" class="form-control" autofocus required>
+                </div>
             </div>
             <div class="form-group">
-                <label for="email" class="control-label col-md-3">Email</label>
-                <input type="email" ng-model="input.email" id="email" class="form-control col-md-9">
+                <label for="email" class="control-label col-md-2">Email</label>
+                <div class="col-md-10">
+                    <input type="email" ng-model="input.email" id="email" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="usrName" class="control-label col-md-2">Username</label>
+                <div class="col-md-10">
+                    <input type="text" ng-model="input.usrName" id="usrName" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="pswrd1" class="control-label col-md-2">Enter Password</label>
+                <div class="col-md-10">
+                    <input type="password" ng-model="input.pswrd1" id="pswrd1" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="pswrd2" class="control-label col-md-2">Confirm Password</label>
+                <div class="col-md-10">
+                    <input type="password" ng-model="input.pswrd2" id="pswrd2" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="address" class="control-label col-md-2">Address</label>
+                <div class="col-md-10">
+                    <input type="text" ng-model="input.address" id="address" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="telNo" class="control-label col-md-2">Telephone</label>
+                <div class="col-md-10">
+                    <input type="tel" ng-model="input.telNo" id="telNo" class="form-control">
+                </div>
             </div>
             <br>
             <br>
-            <input type="radio" ng-model="input.gender" value="male">male
-            <input type="radio" ng-model="input.gender" value="female">female<br>
+            <input type="radio" ng-model="input.gender" value="male" class="view3Radio" id="leftBtn">male
+            <input type="radio" ng-model="input.gender" value="female" class="view3Radio">female<br>
             <!-- This button will call the reset function to clear out the text boxes-->
-            <input type="button" ng-click="reset()" value="Reset" class="btn btn-primary">
+            <input type="button" ng-click="reset()" value="Reset" class="btn btn-primary view3btn">
             <!--This button will call the update function to parse the object to JSON and print the
                 value below-->
-            <input type="submit" ng-click="update(input)" value="Save" class="btn btn-success">
+            <input type="submit" ng-click="update(input)" value="Save" class="btn btn-success view3btn">
         </form>
         <!-- Piping to JSON, this element has a display:none rule in the css file-->
         <pre id="formCapture">form = {{user | json}}</pre>

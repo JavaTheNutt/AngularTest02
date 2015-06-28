@@ -17,3 +17,12 @@ Selector for a scope that is a descendant of a class of .show-scope-demo*/
 #formCapture{
     display: none;
 }
+.view3btn{
+    margin: 10px;
+}
+.view3Radio{
+    margin: 5px;
+}
+#leftBtn{
+    margin-left: 10px;
+}
